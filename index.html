@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work Hub – Join Our Telegram Channel</title>
+<meta name="description" content="Simple online work and flexible timings. Join the Work Hub Telegram channel for details.">
+<meta property="og:title" content="Work Hub – Join Our Telegram Channel">
+<meta property="og:description" content="Simple online work and flexible timings. Join our Telegram channel for details.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --background: #fff;
+  --foreground: #192832;
+  --primary: #007cac;
+  --edge: #005777;
+  --muted: #526473;
+  --card: #f4f9fb;
+  --border: #d9e4e9;
+  --support: #23734c;
+  --notice: #ecfaf1;
+  --shadow: 0 16px 24px -12px #007cac80;
+}
+* { box-sizing: border-box; letter-spacing: 0; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Sora, system-ui, sans-serif;
+}
+.work-page {
+  width: min(100%, 520px);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 32px 24px 48px;
+  text-align: center;
+}
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: 36px; font-weight: 800; }
+h2 { font-size: 24px; }
+h3 { font-size: 16px; }
+p { color: var(--muted); line-height: 1.6; }
+.intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  animation: rise-in .8s ease both;
+}
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--card);
+  font-size: 32px;
+  animation: bob 4s ease-in-out infinite;
+}
+.work-photo {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 8px;
+  box-shadow: 0 16px 40px -20px #1928324d;
+}
+.work-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  animation: photo-in 1.2s ease both;
+  transition: transform .7s ease;
+}
+.work-photo:hover img { transform: scale(1.035); }
+.join-button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-height: 58px;
+  width: min(100%, 360px);
+  padding: 16px 18px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--primary);
+  color: var(--background);
+  border-bottom: 6px solid var(--edge);
+  box-shadow: var(--shadow);
+  transform-style: preserve-3d;
+  animation: button-float 3s ease-in-out infinite;
+  transition: transform .2s, box-shadow .2s;
+}
+.join-button::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: -50%;
+  background: linear-gradient(110deg, transparent 42%, #ffffff73 50%, transparent 58%);
+  transform: translateX(-100%);
+  animation: shine 4s ease-in-out infinite;
+}
+.join-button:hover {
+  animation-play-state: paused;
+  transform: perspective(700px) rotateX(8deg) rotateY(-5deg) translateY(-4px);
+}
+.join-button:active { transform: translateY(4px); box-shadow: none; }
+.join-button:focus-visible { outline: 3px solid var(--primary); outline-offset: 5px; }
+.plane {
+  font-size: 23px;
+  display: inline-block;
+  animation: plane 3s ease-in-out infinite;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  gap: 12px;
+  padding-top: 8px;
+}
+.stat { padding: 12px 6px; border-bottom: 2px solid var(--border); }
+.stat strong { display: block; font-size: 20px; color: var(--primary); }
+.stat span { font-size: 12px; color: var(--muted); }
+.features { width: 100%; display: grid; gap: 16px; }
+.feature-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  text-align: left;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  animation: rise-in .8s ease both;
+  transition: transform .25s, border-color .25s;
+}
+.feature-row:nth-of-type(2) { animation-delay: .15s; }
+.feature-row:nth-of-type(3) { animation-delay: .3s; }
+.feature-row:hover { transform: translateY(-4px); border-color: var(--primary); }
+.feature-row > span { font-size: 30px; }
+.feature-row p, .important p { font-size: 14px; }
+.important {
+  width: 100%;
+  border-left: 3px solid var(--support);
+  background: var(--notice);
+  padding: 18px;
+  text-align: left;
+}
+.important h2 { font-size: 16px; margin-bottom: 8px; }
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes photo-in {
+  from { opacity: 0; transform: scale(1.06); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes bob {
+  50% { transform: translateY(-5px) rotate(3deg); }
+}
+@keyframes button-float {
+  50% { transform: perspective(700px) rotateX(5deg) translateY(-4px); }
+}
+@keyframes shine {
+  0%, 35% { transform: translateX(-100%); }
+  70%, 100% { transform: translateX(100%); }
+}
+@keyframes plane {
+  50% { transform: translate(3px, -2px) rotate(-8deg); }
+}
+@media (max-width: 380px) {
+  .work-page { padding-inline: 16px; }
+  .join-button { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-page *, .work-page *::after { animation: none; transition: none; }
+}
+</style>
+</head>
+<body>
+<main class="work-page">
+  <section class="intro">
+    <div class="brand-icon" aria-hidden="true">💼</div>
+    <h1>WORK HUB</h1>
+    <p>Work From Home • Simple Online Work • Flexible Timings</p>
+
+    <a class="join-button" href="https://t.me/+bX4CZA3N3rtiZDFl" target="_blank" rel="noopener noreferrer">
+      <span class="plane" aria-hidden="true">➤</span> Join Telegram Channel
+    </a>
+
+    <div class="work-photo">
+      <img
+        src="https://id-preview--4525e3b3-73b9-4f5d-8bfd-49718a835fec.lovable.app/__l5e/assets-v1/2f0820b5-29dc-4656-ad2b-1a1efd37fba5/woman-working.jpg"
+        alt="Woman working from home on her laptop"
+        width="1200"
+        height="800"
+        fetchpriority="high"
+      >
+    </div>
+
+    <div class="stats">
+      <div class="stat"><strong>24/7</strong><span>Support</span></div>
+      <div class="stat"><strong>Free</strong><span>To Join</span></div>
+      <div class="stat"><strong>Online</strong><span>Tasks</span></div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Simple Online Work</h2>
+    <div class="feature-row">
+      <span aria-hidden="true">✍️</span>
+      <div>
+        <h3>Easy Online Tasks</h3>
+        <p>Clear instructions for simple tasks you can complete online.</p>
+      </div>
+    </div>
+    <div class="feature-row">
+      <span aria-hidden="true">🏠</span>
+      <div>
+        <h3>Work From Home</h3>
+        <p>Work from your phone or computer, no commuting needed.</p>
+      </div>
+    </div>
+    <div class="feature-row">
+      <span aria-hidden="true">⏰</span>
+      <div>
+        <h3>Flexible Timings</h3>
+        <p>Pick a schedule that suits you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="important">
+    <h2>ℹ️ Important</h2>
+    <p>Payment amounts, eligibility and work requirements are shared in the Telegram channel. Never pay any fee to join.</p>
+  </section>
+
+  <a class="join-button" href="https://t.me/+bX4CZA3N3rtiZDFl" target="_blank" rel="noopener noreferrer">
+    <span class="plane" aria-hidden="true">➤</span> Join Telegram Channel
+  </a>
+</main>
+</body>
+</html>
